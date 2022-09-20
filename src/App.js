@@ -1,10 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import {Menuproduct} from "./Menuproduct";
 
-function Menuproduct(props){
-    const {productName} = props;
-    return <div>{productName}</div>
-}
 function App() {
     return (
 
@@ -15,7 +11,10 @@ function App() {
                 <Menuproduct productName ='bier'></Menuproduct>
                 <Menuproduct productName ='wijn'></Menuproduct>
 
+
+
             </div>
+
 
     );
 }
