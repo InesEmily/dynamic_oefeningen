@@ -6,11 +6,7 @@ function App() {
     return (
             <div>
                 <h1>Menu</h1>
-                <Menuproduct product={PRODUCTS_DATA[0]}/>
-                    <Menuproduct product={PRODUCTS_DATA[1]}/>
-                        <Menuproduct product={PRODUCTS_DATA[2]}/>
-                            <Menuproduct product={PRODUCTS_DATA[3]}/>
-                                <Menuproduct product={PRODUCTS_DATA[4]}/>
+                {PRODUCTS_DATA.map(p => <Menuproduct product={p}/>)}
 
             </div>
 
