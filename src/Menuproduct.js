@@ -1,4 +1,5 @@
 export function Menuproduct(props) {
     const {product} = props;
-    return <div>{product.name} €{product.price}</div>
+    if (!product?.name) return;
+    return <div>{product.name || 'unknown'} €{product.price}</div>
 }

@@ -1,12 +1,16 @@
 import './App.css';
 import {Menuproduct} from "./Menuproduct";
 import {PRODUCTS_DATA} from "./data/data";
+import {MenuCard} from "./components/MenuCard";
+
+
 
 function App() {
     return (
             <div>
                 <h1>Menu</h1>
-                {PRODUCTS_DATA.map(p => <Menuproduct key ={p.name} product={p}/>)}
+                <MenuCard product={PRODUCTS_DATA}/>
+
 
             </div>
 
