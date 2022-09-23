@@ -16,7 +16,7 @@ function Productnote(props) {
 export function Menuproduct(props) {
     const {product} = props ;
     if (!product?.name) return;
-    return <div style={{margin: "2vw",fontSize: "larger",display: "flex"}} >
+    return <div style={{margin: "2vw",fontSize: "larger",display: "flex", justifyContent:"space-between", maxWidth: "50%"}} >
         <div style={{flex: 1}}>{product.name}
             <ProductSize product = {product}/>
         <Productnote product = {product}/>  </div>
