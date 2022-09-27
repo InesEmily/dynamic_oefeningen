@@ -1,13 +1,22 @@
 import './App.css';
-import {Menuproduct} from "./Menuproduct";
-import {PRODUCTS_DATA, PRODUCTS_DATE} from "./data/data";
-import {MenuCard} from "./components/MenuCard";
+
+import { CAR_DATA, NUMBER_DATA, PICTURES_DATA, PRODUCTS_DATA} from "./data/data";
 import {MenuCardPage} from "./pages/MenuCardPage";
-import {PicturesPage} from "./pages/PicturesPage";
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
+import {PicturesPage} from "./pages/PicturesPage";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {NumbersPage} from "./pages/NumbersPage";
+import PropTypes from "prop-types";
+import {CarsPage} from "./pages/CarsPage";
 
 
+
+function Number(props) {
+    return null;
+}
+
+Number.propTypes = {product: PropTypes.any};
 
 function App() {
     return (
@@ -15,7 +24,10 @@ function App() {
             <Tabs defaultIndex={0}>
             <TabList>
                 <Tab>Menu</Tab>
-                <Tab>Pictures</Tab>
+                <Tab>Pics</Tab>
+                <Tab>Numbers</Tab>
+                <Tab>Cars</Tab>
+
             </TabList>
 
             <TabPanel>
@@ -23,8 +35,15 @@ function App() {
                 <MenuCardPage product={PRODUCTS_DATA}/>
             </TabPanel>
             <TabPanel>
-                <PicturesPage/>
+                <h1 style={{margin: "2vw"}}>Pictures</h1>
+                <PicturesPage picture={PICTURES_DATA}/>
             </TabPanel>
+                <TabPanel>
+                    <NumbersPage number={NUMBER_DATA} />
+                </TabPanel>
+                <TabPanel>
+                    <CarsPage car={CAR_DATA}/>
+                </TabPanel>
         </Tabs>
         </>
 
