@@ -33,24 +33,39 @@ export const PICTURES_DATA = [
     },
 ];
 export const NUMBER_DATA = [1, 3, 5, 2, 6, 7, 34, 12, 66, 98, 11, 2];
-export const CAR_DATA = [
-    {
-        id: 1,
-        name: "mijn eerste auto",
-        brand: "peugeot",
-        type: "204",
-        color: "blauw",
-    },
+export const CAR_DATA = [{
+    id: 1,
+    name: "mijn eerste auto",
+    brand: "peugeot",
+    type: "204",
+    color: "blauw",
+},
     {
         id: 2,
         name: "auto van mijn zus",
         brand: "fiat",
         type: "punto",
         color: "geel",
-    }, {id: 3, name: "die van mijn pa", brand: "volvo", color: "zwart"},
-    {id: 4, name: "geitje", brand: "citroën",}
+        note: "die ging altijd kapot"
+    },
+    {id: 3, name: "die van mijn pa", brand: "volvo", color: "zwart"},
+    {id: 4, name: "geitje", brand: "citroën",},
+    {id: 5, name: "auto1", brand: "Peugeot", type: "505", color: "grijs"},
+    {id: 6, name: "auto2", brand: "Fiat", type: "Panda"},
+    {id: 7, name: "auto3", brand: "Fiat", type: "Tipo", color: "groen"},
+    {id: 8, name: "auto4", brand: "Citroën", type: "C4", color: "rood"},
+    {id: 9, name: "auto5", brand: "Fiat", type: "Panda", color: "rood"}
 ];
 
+export const COLOR_DATA = [
+    {dutch: "blauw", english: "blue"},
+    {dutch: "geel", english: "yellow"},
+    {dutch: "rood", english: "red"},
+    {dutch: "zwart", english: "black"},
+    {dutch: "wit", english: "white"},
+    {dutch: "grijs", english: "gray"},
+    {dutch: "groen", english: "green"}
+];
 
 
 

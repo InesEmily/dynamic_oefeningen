@@ -6,8 +6,8 @@ export function CarsPage(props) {
 
     if (!car) return;
     return <div>
-        <div style={{background: "lavender", height: "850px"}}>
-            <Cars car={car} title={"auto's"}/>
+        <div style={{background: "lavender", height: "850px", display:"flex", justifyContent: "center"}}>
+            <Cars car={car} title={"Auto's"}/>
         </div>
     </div>;
 
