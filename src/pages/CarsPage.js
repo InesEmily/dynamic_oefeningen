@@ -1,15 +1,16 @@
 import {Cars} from "../components/Cars";
+import {Section} from "../components/Section";
 
 
 export function CarsPage(props) {
-    const {car} = props;
+    const {cars} = props;
 
-    if (!car) return;
-    return <div>
-        <div style={{background: "lavender", height: "850px", display:"flex", justifyContent: "center"}}>
-            <Cars car={car} title={"Auto's"}/>
-        </div>
-    </div>;
+    if (!cars) return;
+    return <>
+        <Section className="mx-3" title={"Auto's"} >
+            <Cars cars={cars} />
+        </Section>;
+    </>
 
 
 }

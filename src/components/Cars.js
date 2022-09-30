@@ -1,29 +1,41 @@
 import {COLOR_DATA} from "../data/data";
+import {Section} from "./Section";
 
 export function Cars(props) {
-    const {car,title} = props;
-    if (!car) return;
+    const {cars} = props;
+    if (!cars) return;
     return <>
-        <h3 style={{textAlign: "center", fontWeight: "bold", display:"block", position:"relative",left:"750px",marginBottom:"300px"}}>
-            {title}
-        </h3>
+        {cars.map(c => <Car car={c}/>)}
+    </>
+}
 
-        <div style={{display:"flex", height:"100px", width:"90%" , flexWrap:"wrap", justifyContent:"center" ,marginTop:"100px"}}>
-            {car.map(c => <div key={c.id} style={{border:"solid 1px",  backgroundColor:"#ffffff", width:" 25%",height:"153px", margin:"10px", textAlign:"center"}}>
-                <h5>{c.name}</h5>
-                <div>{c.brand? `merk : ${c.brand}`: ""}</div>
-                <div>{c.type? `type : ${c.type}`:""}</div>
-                <div>{c.note? `opm : ${c.note}`:""}</div>
-                {/*<div>{c.color? `color : ${c.color}`:""}</div>*/}
-                <div>{c.color ? <div style={c?.color && {backgroundColor: getBackGround(COLOR_DATA,c.color)}}> kleur: {c.color}</div> : ""}</div>
-            </div>)}
+export function Car(props) {
+    const {car} = props
+    return <>
+        <div key={car.id} style={{
+
+            backgroundColor: "#ffffff",
+            width: " 30%",
+            margin: "10px",
+            textAlign: "center",
+            border: "solid 1px",
+
+        }}>
+
+            <h5>{car.name ? car.name : ""}</h5>
+            <div>{car.brand ?` merk: ${car.brand}` : ""}</div>
+            <div>{car.type ? `type: ${car.type} `: ""}</div>
+            <div>{car.note ? `opmerking: ${car.note}` : ""}</div>
+            <div>
+                {car.color ? <div
+                    style={car?.color && {backgroundColor: Translate(COLOR_DATA, car.color)}}> kleur: {car.color} </div> : ""}
+            </div>
         </div>
     </>
 
+
 }
 
-
-
-function getBackGround(array , color) {
+export function Translate(array, color) {
     return (array.find(el => el.dutch === color).english)
 }

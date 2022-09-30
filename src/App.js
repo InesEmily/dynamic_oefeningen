@@ -1,6 +1,6 @@
 import './App.css';
 
-import { CAR_DATA, NUMBER_DATA, PICTURES_DATA, PRODUCTS_DATA} from "./data/data";
+import {CAR_DATA, NUMBER_DATA, PERSON_DATA, PICTURES_DATA, PRODUCTS_DATA} from "./data/data";
 import {MenuCardPage} from "./pages/MenuCardPage";
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {NumbersPage} from "./pages/NumbersPage";
 import PropTypes from "prop-types";
 import {CarsPage} from "./pages/CarsPage";
+import {PersonPage} from "./pages/PersonPage";
 
 
 
@@ -27,6 +28,7 @@ function App() {
                 <Tab>Pics</Tab>
                 <Tab>Numbers</Tab>
                 <Tab>Cars</Tab>
+                <Tab>Personen</Tab>
 
             </TabList>
 
@@ -39,10 +41,13 @@ function App() {
                 <PicturesPage picture={PICTURES_DATA}/>
             </TabPanel>
                 <TabPanel>
-                    <NumbersPage number={NUMBER_DATA} />
+                    <NumbersPage numbers={NUMBER_DATA} />
                 </TabPanel>
                 <TabPanel>
-                    <CarsPage car={CAR_DATA}/>
+                    <CarsPage cars={CAR_DATA}/>
+                </TabPanel>
+                <TabPanel>
+                    <PersonPage persons={PERSON_DATA}/>
                 </TabPanel>
         </Tabs>
         </>
