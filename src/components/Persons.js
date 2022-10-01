@@ -19,7 +19,8 @@ export function Person(props) {
 export function Persons(props) {
     const {persons} = props;
     if (!persons) return;
-    return (<>
+    return (
+        <>
             {persons.map(p => <Person key={p.id} person={p}/>)}
         </>
 

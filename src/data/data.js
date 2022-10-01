@@ -82,5 +82,15 @@ export const PERSON_DATA = [
     {id: 13, name: "Lieve", age: 20, city: "Mechelen"},
 ];
 
+export const CITIES_DATA=[
+    { name: "Mechelen", numberOfPersons: 200},
+    { name: "Duffel",  numberOfPersons: 300},
+    { name: "Katelijne", numberOfPersons: 400},
+    { name: "Mechelen", numberOfPersons: 500},
+    { name: "Duffel",  numberOfPersons: 200},
+    { name: "Katelijne",numberOfPersons: 300},
+
+];
+
 
 
