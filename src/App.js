@@ -10,7 +10,7 @@ import {NumbersPage} from "./pages/NumbersPage";
 import PropTypes from "prop-types";
 import {CarsPage} from "./pages/CarsPage";
 import {PersonPage} from "./pages/PersonPage";
-import {EventHandlers} from "./pages/EventHandlers";
+import {EventAndStatePage} from "./pages/EventAndStatePage";
 
 
 
@@ -52,7 +52,7 @@ function App() {
                     <PersonPage persons={PERSON_DATA} cities={CITIES_DATA}/>
                 </TabPanel>
                 <TabPanel>
-                 <EventHandlers title={"Events"}/>
+                 <EventAndStatePage title={"Events"}/>
                 </TabPanel>
         </Tabs>
         </>
