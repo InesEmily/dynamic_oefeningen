@@ -1,5 +1,6 @@
 
 import {EventDemo} from "../components/EventDemo";
+import {StateDemo} from "../components/StateDemo";
 
 export function EventAndStatePage(props) {
     const {title} = props;
@@ -7,6 +8,7 @@ export function EventAndStatePage(props) {
         <div style={{background:'lavender'}} className="mx-3">
             <h1>{title}</h1>
         <EventDemo/>
+            <StateDemo/>
         </div>
     );
 
