@@ -1,6 +1,7 @@
 
 import {EventDemo} from "../components/EventDemo";
 import {StateDemo} from "../components/StateDemo";
+import {Counter} from "../components/Counter";
 
 export function EventAndStatePage(props) {
     const {title} = props;
@@ -9,6 +10,8 @@ export function EventAndStatePage(props) {
             <h1>{title}</h1>
         <EventDemo/>
             <StateDemo/>
+            <Counter name="counter1"/>
+            <Counter name="counter2"/>
         </div>
     );
 
