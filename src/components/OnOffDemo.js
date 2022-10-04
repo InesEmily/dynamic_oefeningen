@@ -7,9 +7,11 @@ export function OnOffDemo(props){
 
     return <>
         <div>de huidige waarde van  is :{demoValue? 'ON':'OFF'}</div>
+        <div>
         <MyButton onClick={()=>setDemoValue(true)}>on</MyButton>
         <MyButton onClick={()=>setDemoValue(false)}>off</MyButton>
         <MyButton onClick={()=>setDemoValue(!demoValue)}>toggle</MyButton>
+        </div>
     </>;
 
 }
