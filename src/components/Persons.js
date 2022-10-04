@@ -7,7 +7,7 @@ export function Person(props) {
     return (
         <Col xs={4} sm={3} md={2} xxl={2}
              className={"text-center"}>
-            <Card className="m-2 p-2 shadow-sm">
+            <Card onClick={()=>alert(person.name)} className="m-2 p-2 shadow-sm">
                 <h4>{person.name}</h4>
                 <div>{person.age}</div>
                 <div>{person.city}</div>

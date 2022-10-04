@@ -10,6 +10,7 @@ import {NumbersPage} from "./pages/NumbersPage";
 import PropTypes from "prop-types";
 import {CarsPage} from "./pages/CarsPage";
 import {PersonPage} from "./pages/PersonPage";
+import {EventHandlers} from "./pages/EventHandlers";
 
 
 
@@ -29,6 +30,7 @@ function App() {
                 <Tab>Numbers</Tab>
                 <Tab>Cars</Tab>
                 <Tab>Personen</Tab>
+                <Tab>Event & Handlers</Tab>
 
             </TabList>
 
@@ -48,6 +50,9 @@ function App() {
                 </TabPanel>
                 <TabPanel>
                     <PersonPage persons={PERSON_DATA} cities={CITIES_DATA}/>
+                </TabPanel>
+                <TabPanel>
+                 <EventHandlers title={"Events"}/>
                 </TabPanel>
         </Tabs>
         </>

@@ -17,7 +17,7 @@ export function City(props) {
     return (
         <Col xs={4} sm={3} md={2} xxl={2}
              className={"text-center"}>
-            <Card className="m-2 p-2 shadow-sm">
+            <Card onClick={()=>alert(city.name)} className="m-2 p-2 shadow-sm">
                 <h4>{city.name}</h4>
                 <div>{city.numberOfPersons}</div>
             </Card>
