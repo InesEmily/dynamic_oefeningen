@@ -2,6 +2,7 @@
 import {EventDemo} from "../components/EventDemo";
 import {StateDemo} from "../components/StateDemo";
 import {Counter} from "../components/Counter";
+import {OnOffDemo} from "../components/OnOffDemo";
 
 export function EventAndStatePage(props) {
     const {title} = props;
@@ -12,6 +13,7 @@ export function EventAndStatePage(props) {
             <StateDemo/>
             <Counter name="counter1"/>
             <Counter name="counter2"/>
+            <OnOffDemo/>
         </div>
     );
 
