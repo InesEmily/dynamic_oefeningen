@@ -1,8 +1,7 @@
 import {MyButton} from "./MyButton";
-import {useState} from "react";
 
-export function DemoValue(){
-    const [demoValue,setDemoValue] =useState(0);
+export function DemoValue(props){
+ const {demoValue,setDemoValue} = props;
     return <>
     <div>de waarde van demoValue is {demoValue}</div>
     <div>de waarde van demoValue is {demoValue}</div>

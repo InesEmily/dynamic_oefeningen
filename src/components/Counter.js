@@ -1,6 +1,5 @@
 import {MyButton} from "./MyButton";
 import {useState} from "react";
-import {Section} from "./Section";
 
 export function Counter(props){
     const {name} =props;
