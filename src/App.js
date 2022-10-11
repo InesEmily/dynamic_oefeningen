@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 import {CarsPage} from "./pages/CarsPage";
 import {PersonPage} from "./pages/PersonPage";
 import {EventAndStatePage} from "./pages/EventAndStatePage";
+import {FavoriteNumberPage} from "./pages/FavoriteNumberPage";
 
 
 
@@ -31,6 +32,7 @@ function App() {
                 <Tab>Cars</Tab>
                 <Tab>Personen</Tab>
                 <Tab>Event & Handlers</Tab>
+                <Tab>Fav numbers</Tab>
 
             </TabList>
 
@@ -53,6 +55,9 @@ function App() {
                 </TabPanel>
                 <TabPanel>
                  <EventAndStatePage title={"Events"}/>
+                </TabPanel>
+                <TabPanel>
+                   <FavoriteNumberPage numbers={NUMBER_DATA}/>
                 </TabPanel>
         </Tabs>
         </>
