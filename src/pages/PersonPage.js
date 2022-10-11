@@ -8,7 +8,7 @@ export function PersonPage(props) {
     const {persons,cities} = props;
     if (!persons) return;
     return (<>
-            <Section title={'alle personen'} button='alle personen!'>
+            <Section title={'alle personen'} button='alle personen!' initial={true}>
                 <Persons persons={persons}/>
             </Section>
             <Section title={'alle personen volgens leeftijd'} button='volgens leeftijd!'>

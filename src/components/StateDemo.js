@@ -7,7 +7,7 @@ import {DemoValueReadonly} from "./DemoValueReadonly";
 
 export function StateDemo(){
     const [demoValue,setDemoValue] =useState(0);
-    return <Section title='state'>
+    return <Section title='state' initial={true}>
         <DemoValue demoValue={demoValue} setDemoValue={setDemoValue}/>
         <Counter name="counter1"/>
         <Counter name="counter2"/>

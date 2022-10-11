@@ -7,7 +7,7 @@ export function CarsPage(props) {
 
     if (!cars) return;
     return <>
-        <Section className="mx-3" title={"Auto's"} button='Cars!!!' >
+        <Section className="mx-3" title={"Auto's"} button='Cars!!!' initial={true} >
             <Cars cars={cars} />
         </Section>;
     </>

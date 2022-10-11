@@ -6,7 +6,7 @@ export function NumbersPage(props) {
     if (!numbers) return;
     return <div>
         <div className="mx-3">
-            <Section title={'Alle getallen'} button='Getallen jeej'>
+            <Section title={'Alle getallen'} button='Getallen jeej' initial={true}>
             <Numbers numbers={numbers} />
             </Section>
             <Section button='Getallen > 6' title='Getallen >6'>
