@@ -14,6 +14,9 @@ import {EventAndStatePage} from "./pages/EventAndStatePage";
 import {FavoriteNumberPage} from "./pages/FavoriteNumberPage";
 import {InputPage} from "./pages/InputPage";
 import {SearchPersonsPage} from "./pages/SearchPersonsPage";
+import {PersonsFromDbPage} from "./pages/PersonsFromDbPage";
+import {CarsFromDbPage} from "./pages/CarsFromDbPage";
+import {MenuFromDbPage} from "./pages/MenuFromDbPage.";
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
                 <Tab>fav numbers</Tab>
                 <Tab>input</Tab>
                 <Tab>Search</Tab>
+                <Tab>Person database</Tab>
+                <Tab>Cars @DB</Tab>
+                <Tab>Menu @DB</Tab>
             </TabList>
             <TabPanel>
                 <MenuCardPage products={PRODUCTS_DATA}/>
@@ -56,6 +62,15 @@ function App() {
             </TabPanel>
             <TabPanel>
                 <SearchPersonsPage persons={PERSON_DATA}/>
+            </TabPanel>
+            <TabPanel>
+                <PersonsFromDbPage/>
+            </TabPanel>
+            <TabPanel>
+                <CarsFromDbPage/>
+            </TabPanel>
+            <TabPanel>
+                <MenuFromDbPage/>
             </TabPanel>
         </Tabs>
     );

@@ -26,7 +26,6 @@ function styleColor(color) {
 
 function CarColor(props) {
     const {color} = props;
-
     if (!color) return null;
     return <div style={styleColor(color)}>
         kleur: {color} &nbsp;
@@ -59,6 +58,7 @@ Car.propTypes = {
 
 export function Cars(props) {
     const {cars, title, isInitiallyOpen} = props
+    if (!cars)return ;
     return (
         <Section title={title} isInitiallyOpen={isInitiallyOpen}>
             {cars.map(c => <Car key={c.id} car={c}/>)}

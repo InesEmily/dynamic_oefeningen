@@ -4,6 +4,7 @@ import {Container} from "react-bootstrap";
 
 export function MenuCard(props) {
     const {products} = props;
+    if (!products)return ;
     return (
         <div>
             <h1>Menu</h1>

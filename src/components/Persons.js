@@ -25,6 +25,7 @@ Person.propTypes = {
 
 export function Persons(props) {
     const {persons, title, isInitiallyOpen} = props;
+    if (!persons)return ;
     return (
         <Section title={title} isInitiallyOpen={isInitiallyOpen}>
             {persons.map(p => <Person key={p.id} person={p} />)}
