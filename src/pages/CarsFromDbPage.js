@@ -4,14 +4,18 @@ import {useCollectionData} from "react-firebase-hooks/firestore";
 import {Cars} from "../components/Cars";
 
 export function CarsFromDbPage(){
-    const query = collection(firestoreDB,'Cars');
-    const [values,loading,error] = useCollectionData(query);
+    const collectionRef = collection(firestoreDB,'Cars').withConverter(carsConverter);
+    const [values,loading,error] = useCollectionData(collectionRef);
     console.log({values,loading,error});
     return( <>
             <Cars cars={values} title="cars from DB"/>
     </>
-
-
     )
-
 }
+const carsConverter ={
+// toFirestore: undefined,
+    fromFirestore: function (snapshot, options){
+        const data =snapshot.data(options);
+        return {...data, id: snapshot.id}
+    }
+};
