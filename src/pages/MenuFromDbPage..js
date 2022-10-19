@@ -1,11 +1,15 @@
-import {collection} from "firebase/firestore";
+import {collection,query,where} from "firebase/firestore";
 import {firestoreDB} from "../services/firebase";
 import {useCollectionData} from "react-firebase-hooks/firestore";
 import {MenuCard} from "../components/MenuCard";
 
 export function MenuFromDbPage(){
     const collectionRef = collection(firestoreDB,'Menu').withConverter(menuConverter);
-    const [values,loading,error] = useCollectionData(collectionRef);
+    const queryRef = query(collectionRef, where("price", ">", 1),
+        where("name", "==", "mojito"));
+
+    const [values,loading,error] = useCollectionData(queryRef);
+    console.log(error);
     console.log({values,loading,error});
     return(
         <>
@@ -13,6 +17,9 @@ export function MenuFromDbPage(){
         </>
     )
 }
+
+
+
 const menuConverter ={
 // toFirestore: undefined,
     fromFirestore: function (snapshot, options){
