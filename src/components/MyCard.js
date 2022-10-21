@@ -7,5 +7,6 @@ export function MyCard(props) {
                  onClick={onSelect}>
         <h5>{title}</h5>
         {children}
+        {/*vb : card heeft getal n°2*/}
     </Card>;
 }

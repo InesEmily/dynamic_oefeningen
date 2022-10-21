@@ -7,7 +7,7 @@ function Number(props) {
     const {number, onSelect, isMarked} = props;
     return (
         <Col xs={4} sm={3} md={2} xxl={1}>
-            <MyCard onSelect={() => onSelect(number)} isMarked={isMarked}>{number}</MyCard>
+            <MyCard onSelect={() => onSelect(number)}>{number}</MyCard>
         </Col>
     );
 }
@@ -16,11 +16,7 @@ export function Numbers(props) {
     const {numbers, title, isInitiallyOpen, onSelectNumber, markedNumber} = props
     return (
         <Section title={title} isInitiallyOpen={isInitiallyOpen}>
-            {numbers.map((n, i) =>
-                <Number key={i}
-                        number={n}
-                        isMarked={markedNumber===n}
-                        onSelect={onSelectNumber}/>)}
+            {numbers.map((n, i) => <Number key={i} number={n} onSelect={onSelectNumber}/>)}
         </Section>
     );
 }
@@ -29,6 +25,5 @@ Numbers.propTypes = {
     numbers: PropTypes.array,
     title: PropTypes.string,
     isInitiallyOpen: PropTypes.bool,
-    markedNumber: PropTypes.number,
     onSelectNumber: PropTypes.func
 };
